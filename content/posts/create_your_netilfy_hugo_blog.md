@@ -64,6 +64,7 @@ to check your installation.
 
 ```bash
 hugo new site myblog
+cd myblog
 ```
 
 ## Add a theme
