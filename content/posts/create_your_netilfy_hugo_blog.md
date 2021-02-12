@@ -43,74 +43,58 @@ https://golang.org/doc/install
 ### Cloning and installing Hugo from source
 
 Open a console window, cd into a directory outside your `GOPATH` ( to find out what your `GOPATH` is, in the console window type something like `set GOPATH` or `echo $GOPATH` depending on your system ), then
-
 ```bash
 git clone https://github.com/gohugoio/hugo.git
 cd hugo
 go install
 ```
-
 Sit back, this will take a while. The Go compiler will download all the dependencies and build Hugo for your platform.
 
 When ready, type
-
 ```
 hugo version
 ```
-
 to check your installation.
 
 ## Create your site
-
 ```bash
 hugo new site myblog
 cd myblog
 ```
-
 ## Add a theme
 
 ### Download a theme
 
 Initialize your blog folder as a git repository and add the `ananke` theme as a submodule.
-
 ```bash
 git init
 git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
 ```
-
 ### Add the theme to your config
 
 Add the line
-
 ```
 theme = "ananke"
 ```
-
 to your `config.toml` . Change the base url to `/` and edit the title of the blog.
 
 Your `config.toml` by now should look somthing like
-
 ```
 baseURL = "/"
 languageCode = "en-us"
 title = "My Blog"
 theme = "ananke"
 ```
-
 ## Create and edit your first post
-
 ```bash
 hugo new posts/my-first-post.md
 ```
-
 Edit the post in your favorite text editor.
 
 ## Start Hugo development server
-
 ```bash
 hugo server -D
 ```
-
 then visit [http://localhost:1313/](http://localhost:1313/) in your browser
 
 # Deploying on netlify
@@ -122,7 +106,6 @@ Sign up to netlify if you have not already at https://app.netlify.com/signup .
 ## Build configuration
 
 The docs and examples available on the net get you close to deploying on netlify, but not quite there. At the time of the writing of this post, this configuration will do:
-
 ```toml
 [build]
 publish = "public"
@@ -133,7 +116,6 @@ HUGO_VERSION = "0.80.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 ```
-
 Save this file as `netlify.toml` in the root of your project ( `myblog` folder in our case ).
 
 ## Commit and push your site to git
@@ -141,19 +123,14 @@ Save this file as `netlify.toml` in the root of your project ( `myblog` folder i
 Create a git repo at GitHub https://github.com/, GitLab https://gitlab.com/ or Bitbucket https://bitbucket.org/.
 
 Visit the repo, copy its link and add it as a remote
-
 ```bash
 git remote add origin <your repo link>
 ```
-
 or
-
 ```bash
 git remote add origin <your repo link>.git
 ```
-
 Then create a commit and push ( you may want to change `master` to `main` depending on what default branch was created for you by `git init` )
-
 ```bash
 git add .
 git commit -m "Initial commit"
@@ -162,7 +139,6 @@ git push --set-upstream origin master
 # or
 git push --set-upstream origin main
 ```
-
 ## Deploy
 
 Create a new site from git at https://app.netlify.com/start .
