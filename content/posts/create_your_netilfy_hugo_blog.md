@@ -51,7 +51,7 @@ go install
 Sit back, this will take a while. The Go compiler will download all the dependencies and build Hugo for your platform.
 
 When ready, type
-```
+```bash
 hugo version
 ```
 to check your installation.
@@ -73,13 +73,13 @@ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/anan
 ### Add the theme to your config
 
 Add the line
-```
+```bash
 theme = "ananke"
 ```
 to your `config.toml` . Change the base url to `/` and edit the title of the blog.
 
 Your `config.toml` by now should look somthing like
-```
+```toml
 baseURL = "/"
 languageCode = "en-us"
 title = "My Blog"
