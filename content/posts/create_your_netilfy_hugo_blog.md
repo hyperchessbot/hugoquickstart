@@ -28,7 +28,7 @@ https://gohugo.io/getting-started/installing
 
 Before we get lost in the forest of all the binary releases, Homebrews, Chocolateys, Scoops and apt-get installs, we are going to do it in the fundamental, platform independent way.
 
-### Prerequsisites
+### Prerequisites
 
 We need need `git` and the `Go` language. You can object, how having to install two things to install a third one is simpler than installing the third one right away, well these former tools are more fundamental than Hugo, they are more likely have their installer for your platform and you can use them for other purposes, it is even possible that you already have them installed.
 
