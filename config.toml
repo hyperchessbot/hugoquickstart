@@ -7,3 +7,9 @@ theme = "swift"
 	[params.designer]
 	    name = "hyperchessbot"
 	    url = "https://github.com/hyperchessbot"
+
+[menu]
+	[[menu.main]]
+		name = "About"
+		url = "about"
+		weight = 1
