@@ -18,7 +18,7 @@ https://www.netlify.com/
 
 ## Installing Hugo
 
-Let's start from the official quick start guide
+We begin with the official quick start guide
 
 https://gohugo.io/getting-started/quick-start/
 
