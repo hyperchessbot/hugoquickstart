@@ -6,11 +6,11 @@ draft: true
 
 # Create your *Hugo* blog and host it on *netlify*
 
-## What is *Hugo*?
+## What is *Hugo* ?
 
 Hugo is a static site generator, that lets you create your site from markdown content, ideally suited to create a blog. It comes with several templates, that let you customize your experience.
 
-## What is *netlify*?
+## What is *netlify* ?
 
 Netlify is a static web site hosting platform, very business like at that. It offers several features that let you add dynamics to your static site, including forms, serverless functions, etc. We are only going to use its grass root static hosting capability.
 
