@@ -12,13 +12,13 @@ Hugo is a static site generator, that lets you create your site from markdown co
 
 ## What is netlify?
 
-Netlify is a static web site hosting platform, very business like at that. It offers several feautures that let you give dynamics to your static site, including forms, serverless functions, etc. We are only going to use its grass root static hosting capability.
+Netlify is a static web site hosting platform, very business like at that. It offers several features that let you add dynamics to your static site, including forms, serverless functions, etc. We are only going to use its grass root static hosting capability.
 
 https://www.netlify.com/
 
 ## Installing Hugo
 
-We are going start from the official quick start guide
+Let's start from the official quick start guide
 
 https://gohugo.io/getting-started/quick-start/
 
@@ -50,22 +50,20 @@ cd hugo
 go install
 ```
 
-Site, back, htis will take a while. Go compiler will download all the dependencies and build Hugo for your platform.
+Sit back, this will take a while. The Go compiler will download all the dependencies and build Hugo for your platform.
 
-When ready, type `hugo version` to check your installation.
+When ready, type
+
+```
+hugo version
+```
+
+to check your installation.
 
 ## Create your site
 
 ```bash
 hugo new site myblog
-```
-
-## Add a theme
-
-```bash
-cd myblog
-git init
-git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
 ```
 
 ## Add a theme
@@ -87,7 +85,7 @@ Add the line
 theme = "ananke"
 ```
 
-to your `config.toml` . Cchange base url to `/` and edit the title of the blog.
+to your `config.toml` . Change the base url to `/` and edit the title of the blog.
 
 Your `config.toml` by now should look somthing like
 
@@ -112,8 +110,7 @@ Edit the post in your favorite text editor.
 hugo server -D
 ```
 
-then visit http://localhost:1313/ in your browser
-
+then visit [http://localhost:1313/](http://localhost:1313/) in your browser
 
 # Deploying on netlify
 
@@ -142,7 +139,7 @@ Save this file as `netlify.toml` in the root of your project ( `myblog` folder i
 
 Create a git repo at GitHub https://github.com/, GitLab https://gitlab.com/ or Bitbucket https://bitbucket.org/.
 
-Visit the repo, copy its link add it as a remote
+Visit the repo, copy its link and add it as a remote
 
 ```
 git remote add origin <your repo link>
@@ -167,9 +164,9 @@ git push --set-upstream origin main
 
 ## Deploy
 
-Create a new site from git https://app.netlify.com/start .
+Create a new site from git at https://app.netlify.com/start .
 
 Don't worry about your deploy settings, they will be taken care of by your `netlify.toml`.
 
-If everything goes well, upon finishing the the required steps you site will be built and you can you can open it for viewing. The site will have an auto generated name, you can change this in Site settings / Site information / Change site name.
+If everything goes well, upon finishing the required steps your site will be built and you can you can open it for viewing. The site will have an auto generated name, you can change this in Site settings / Site information / Change site name.
 
