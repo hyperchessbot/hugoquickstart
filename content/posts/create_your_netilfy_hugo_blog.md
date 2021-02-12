@@ -8,11 +8,11 @@ draft: true
 
 ## What is *Hugo* ?
 
-Hugo is a static site generator, that lets you create your site from markdown content, ideally suited to create a blog. It comes with several templates, that let you customize your experience.
+Hugo is a static site generator, that lets you create your site from *markdown* content, ideally suited to create a blog. It comes with several *templates*, that let you customize your experience.
 
 ## What is *netlify* ?
 
-Netlify is a static web site hosting platform, very business like at that. It offers several features that let you add dynamics to your static site, including forms, serverless functions, etc. We are only going to use its grass root static hosting capability.
+*Netlify* is a static web site hosting platform, very business like at that. It offers several features that let you add dynamics to your static site, including forms, serverless functions, etc. We are only going to use its grass root static hosting capability.
 
 https://www.netlify.com/
 
@@ -22,7 +22,7 @@ We begin with the official quick start guide
 
 https://gohugo.io/getting-started/quick-start/
 
-Immediatly on step one we bump into the problem of how to install Hugo. The quick start guide directs us to Hugo installation page
+Immediatly on step one we bump into the problem of how to install Hugo. The quick start guide directs us to *Hugo* installation page
 
 https://gohugo.io/getting-started/installing
 
@@ -30,7 +30,7 @@ Before we get lost in the forest of all the binary releases, Homebrews, Chocolat
 
 ### Prerequisites
 
-We need need `git` and the `Go` language. You can object, how having to install two things to install a third one is simpler than installing the third one right away, well these former tools are more fundamental than Hugo, they are more likely to have their installer for your platform and you can use them for other purposes, it is even possible that you already have them installed.
+We need need *git* and the *Go* language. You can object, how having to install two things to install a third one is simpler than installing the third one right away, well these former tools are more fundamental than *Hugo*, they are more likely to have their installer for your platform and you can use them for other purposes, it is even possible that you already have them installed.
 
 #### *Git*
 
@@ -48,7 +48,7 @@ git clone https://github.com/gohugoio/hugo.git
 cd hugo
 go install
 ```
-Sit back, this will take a while. The Go compiler will download all the dependencies and build Hugo for your platform.
+Sit back, this will take a while. The *go* compiler will download all the dependencies and build Hugo for your platform.
 
 When ready, type
 ```bash
