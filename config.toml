@@ -2,3 +2,8 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Hyperchesbot's Ramblings"
 theme = "swift"
+
+[params]
+	[params.designer]
+	    name = "hyperchessbot"
+	    url = "https://github.com/hyperchessbot"
