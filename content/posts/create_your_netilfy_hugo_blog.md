@@ -4,19 +4,19 @@ date: "2021-02-12T10:19:58+01:00"
 draft: true
 ---
 
-# Create your Hugo blog and host it on netlify
+# Create your *Hugo* blog and host it on *netlify*
 
-## What is Hugo?
+## What is *Hugo*?
 
 Hugo is a static site generator, that lets you create your site from markdown content, ideally suited to create a blog. It comes with several templates, that let you customize your experience.
 
-## What is netlify?
+## What is *netlify*?
 
 Netlify is a static web site hosting platform, very business like at that. It offers several features that let you add dynamics to your static site, including forms, serverless functions, etc. We are only going to use its grass root static hosting capability.
 
 https://www.netlify.com/
 
-## Installing Hugo
+## Installing *Hugo*
 
 We begin with the official quick start guide
 
@@ -32,15 +32,15 @@ Before we get lost in the forest of all the binary releases, Homebrews, Chocolat
 
 We need need `git` and the `Go` language. You can object, how having to install two things to install a third one is simpler than installing the third one right away, well these former tools are more fundamental than Hugo, they are more likely to have their installer for your platform and you can use them for other purposes, it is even possible that you already have them installed.
 
-#### Git
+#### *Git*
 
 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-#### Go
+#### *Go*
 
 https://golang.org/doc/install
 
-### Cloning and installing Hugo from source
+### Cloning and installing *Hugo* from source
 
 Open a console window, cd into a directory outside your `GOPATH` ( to find out what your `GOPATH` is, in the console window type something like `set GOPATH` or `echo $GOPATH` depending on your system ), then
 ```bash
@@ -91,13 +91,13 @@ hugo new posts/my-first-post.md
 ```
 Edit the post in your favorite text editor.
 
-## Start Hugo development server
+## Start *Hugo* development server
 ```bash
 hugo server -D
 ```
 Then visit [http://localhost:1313/](http://localhost:1313/) in your browser.
 
-# Deploying on netlify
+# Deploying on *netlify*
 
 ## Sign up
 
@@ -118,7 +118,7 @@ HUGO_ENABLEGITINFO = "true"
 ```
 Save this file as `netlify.toml` in the root of your project ( `myblog` folder in our case ).
 
-## Commit and push your site to git
+## Commit and push your site to *git*
 
 Create a git repo at GitHub https://github.com/, GitLab https://gitlab.com/ or Bitbucket https://bitbucket.org/.
 
