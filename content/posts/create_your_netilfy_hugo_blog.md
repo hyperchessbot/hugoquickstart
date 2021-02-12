@@ -142,19 +142,19 @@ Create a git repo at GitHub https://github.com/, GitLab https://gitlab.com/ or B
 
 Visit the repo, copy its link and add it as a remote
 
-```
+```bash
 git remote add origin <your repo link>
 ```
 
 or
 
-```
+```bash
 git remote add origin <your repo link>.git
 ```
 
 Then create a commit and push ( you may want to change `master` to `main` depending on what default branch was created for you by `git init` )
 
-```
+```bash
 git add .
 git commit -m "Initial commit"
 
