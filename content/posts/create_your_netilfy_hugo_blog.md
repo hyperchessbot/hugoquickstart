@@ -65,7 +65,7 @@ cd myblog
 
 ### Download a theme
 
-Initialize your blog folder as a git repository and add the `ananke` theme as a submodule.
+Initialize your blog folder as a git repository and add the **[ananke](https://github.com/budparr/gohugo-theme-ananke)** theme as a submodule.
 ```bash
 git init
 git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
@@ -76,9 +76,9 @@ Add the line
 ```bash
 theme = "ananke"
 ```
-to your `config.toml` . Change the base url to `/` and edit the title of the blog.
+to your `config.toml` . Change the base url to *"/"* and edit the title of the blog.
 
-Your `config.toml` by now should look somthing like
+Your *config.toml* by now should look something like
 ```toml
 baseURL = "/"
 languageCode = "en-us"
@@ -95,7 +95,7 @@ Edit the post in your favorite text editor.
 ```bash
 hugo server -D
 ```
-then visit [http://localhost:1313/](http://localhost:1313/) in your browser
+Then visit [http://localhost:1313/](http://localhost:1313/) in your browser.
 
 # Deploying on netlify
 
@@ -143,7 +143,7 @@ git push --set-upstream origin main
 
 Create a new site from git at https://app.netlify.com/start .
 
-Don't worry about your deploy settings, they will be taken care of by your `netlify.toml`.
+Don't worry about your deploy settings, they will be taken care of by your *netlify.toml*.
 
-If everything goes well, upon finishing the required steps your site will be built and you can you can open it for viewing. The site will have an auto generated name, you can change this in Site settings / Site information / Change site name.
+If everything goes well, upon finishing the required steps your site will be built and you can you can open it for viewing. The site will have an auto generated name, you can change this in *Site settings / Site information / Change site name*.
 
