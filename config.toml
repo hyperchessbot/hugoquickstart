@@ -1,7 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Hyperchesbot's Ramblings"
-theme = "myswift"
+theme = "swiftcode"
 
 [params]
 	[params.designer]
