@@ -22,7 +22,7 @@ We begin with the official quick start guide
 
 https://gohugo.io/getting-started/quick-start/
 
-Immediatly on step one we bump into the problem of how to install Hugo. The quick start guide directs us to *Hugo* installation page
+Immediatly on step one we bump into the problem of how to install *Hugo*. The quick start guide directs us to *Hugo* installation page
 
 https://gohugo.io/getting-started/installing
 
@@ -48,7 +48,7 @@ git clone https://github.com/gohugoio/hugo.git
 cd hugo
 go install
 ```
-Sit back, this will take a while. The *go* compiler will download all the dependencies and build Hugo for your platform.
+Sit back, this will take a while. The *go* compiler will download all the dependencies and build *Hugo* for your platform.
 
 When ready, type
 ```bash
