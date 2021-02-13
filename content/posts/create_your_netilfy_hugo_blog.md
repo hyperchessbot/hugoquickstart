@@ -76,9 +76,9 @@ Add the line
 ```bash
 theme = "ananke"
 ```
-to your `config.toml` . Change the base url to *"/"* and edit the title of the blog.
+to your `config.toml` . Change the base url to `/` and edit the title of the blog.
 
-Your *config.toml* by now should look something like
+Your `config.toml` by now should look something like
 ```toml
 baseURL = "/"
 languageCode = "en-us"
@@ -143,7 +143,7 @@ git push --set-upstream origin main
 
 Create a new site from git at https://app.netlify.com/start .
 
-Don't worry about your deploy settings, they will be taken care of by your *netlify.toml*.
+Don't worry about your deploy settings, they will be taken care of by your `netlify.toml`.
 
 If everything goes well, upon finishing the required steps your site will be built and you can you can open it for viewing. The site will have an auto generated name, you can change this in *Site settings / Site information / Change site name*.
 
