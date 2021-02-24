@@ -14,3 +14,26 @@ Once deployed to Heroku, your bot will accept challenges and play games without 
 
 # Why *Hyper Bot* ?
 
+## Self learning book
+
+Hyper Bot can play from a MongoDb hosted book, automatically updated with its own games on every server startup.
+
+## Endgame tablebases
+
+Hyper Bot comes with 3-4-5 piece szyzgy endgame tablebases, which make its handling of endgames superficial. Even bots running on strong hardware may be helpless mating with KNB vs K, but not Hyper Bot, it will find the shortest mate in such a position without hesitation.
+
+## Easy installation and setup
+
+Hyper Bot can be set up without any local installation. Forget about having to install Python, deal with virtual envs, copying config.yml.default.
+
+Every installation step is done online. You only need to set two config variables to configure your bot and have it up and running.
+
+## Free cloud hosting
+
+Hyper Bot is designed to be run on a free Heroku account. You can have such an account for the cost of an email address.
+
+A free Heroku account will have an 550 hours running limit per month and will sleep after cca. half an hour of idleness. Hyper Bot accounts for this by having a mechanism that keeps the bot alive from early morning till late night server time.
+
+## Rich configuration options
+
+As you already Hyper Bot initial configuration is very simple, but you have a wide range of options to configure your bot. This is done through setting environment variables ( called config vars on Heroku ). The ReadMe lists and explains all the configuration options.
