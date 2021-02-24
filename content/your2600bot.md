@@ -37,3 +37,67 @@ A free Heroku account will have an 550 hours running limit per month and will sl
 ## Rich configuration options
 
 As you already Hyper Bot initial configuration is very simple, but you have a wide range of options to configure your bot. This is done through setting environment variables ( called config vars on Heroku ). The ReadMe lists and explains all the configuration options.
+
+# How do I make *Hyper Bot* strong?
+
+By default you will get a bot that plays strong chess, however to compete with the strongest bots default settings are not enough any more, you have to fine tune your bot with additional settings.
+
+## The quick way
+
+To make Hyper Bot really strong, you have to sign up to additional services. You need Heroku CLI and a MongoDb account. If you feel this is a hassle and want a strong bot quickly, Hyper Bot offers you some simple settings that will make your bot play strong.
+
+### Threads
+
+Running on a single thread the engine cannot make use of multiple CPUs. To allow harnessing all the computing power of your system, you need to set uci option `Threads` to something more than the default `1`. Natural setting for this variable is the number of physical CPUs of your computer. However on Heroku this works a litle bit different, for a free account the value `4` has proved to be optimal.
+
+```bash
+ENGINE_THREADS=4
+```
+
+### Hash
+
+Increasing the size of the engine hash table using Hash uci option allows the engine to cache in its search results. Again due to Heroku free account memory limits the value `128` can be considered a good compromise.
+
+```bash
+ENGINE_HASH=128
+```
+
+### Pondering
+
+By default the engine will think on its own time. For stronger play you have to allow the engine to think on opponent time, and this can be done with the `ALLOW_PONDER` setting.
+
+```bash
+ALLOW_PONDER=true
+```
+
+### Polyglot book
+
+Hyper Bot comes with a polyglot format book compiled from CCRL > 3300 rated games. To allow using this book you need the `USE_POLYGLOT` setting.
+
+```bash
+USE_POLYGLOT=true
+```
+
+### Skip fen
+
+Hyper Bot determines the position's fen from the game move list supplied by lichess. This takes some time. It is only strictly necessary for book lookups, so if you are content with the home page not showing positions beyond book depth, you can use the `SKIP_FEN` setting.
+
+```bash
+SKIP_FEN=true
+```
+
+### Incremental update
+
+Hyper Bot determines the position's fen from the game move list supplied by lichess from scratch. This can be imporved upon for variant standard. To allow incremental update with only the latest move, you can use the `INCREMENTAL_UPDATE` setting.
+
+```bash
+INCREMENTAL_UPDATE=true
+```
+
+### Disable logging
+
+Hyper Bot can show its currently played live game and the evaluation in its home page and logs in the browser debugger window. This requires using additional resources, if you are after performance, you will want to disable this using the `DISABLE_LOGS` setting.
+
+```bash
+DISABLE_LOG=true
+```
