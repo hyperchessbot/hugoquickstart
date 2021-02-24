@@ -56,7 +56,7 @@ ENGINE_THREADS=4
 
 ### Hash
 
-Increasing the size of the engine hash table using Hash uci option allows the engine to cache in its search results. Again due to Heroku free account memory limits the value `128` can be considered a good compromise.
+Increasing the size of the engine hash table using the `Hash` uci option allows the engine to cache in its search results. Again due to Heroku free account memory limits the value `128` can be considered a good compromise.
 
 ```bash
 ENGINE_HASH=128
