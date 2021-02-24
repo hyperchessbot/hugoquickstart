@@ -36,7 +36,7 @@ A free Heroku account will have an 550 hours running limit per month and will sl
 
 ## Rich configuration options
 
-As you already Hyper Bot initial configuration is very simple, but you have a wide range of options to configure your bot. This is done through setting environment variables ( called config vars on Heroku ). The ReadMe lists and explains all the configuration options.
+As you already learned, Hyper Bot initial configuration is very simple, but you have a wide range of options to configure your bot. This is done through setting environment variables ( called config vars on Heroku ). The ReadMe lists and explains all the configuration options.
 
 # How do I make *Hyper Bot* strong?
 
