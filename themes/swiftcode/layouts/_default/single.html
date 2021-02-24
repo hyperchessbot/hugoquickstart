@@ -47,6 +47,10 @@
 
   //console.log("log url", logUrl)
 
-  fetch(logUrl)
+  if(document.location.host.match(/localhost/)){
+    console.log(`logging disabled for localhost`)
+  }else{
+    fetch(logUrl)
+  }  
 </script>
 {{- end }}
