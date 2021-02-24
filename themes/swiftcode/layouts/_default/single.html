@@ -38,4 +38,15 @@
 <script src = '{{ absURL "js/autosize.min.js" }}'></script>
 {{- $timeagoScr := resources.Get "js/timeago.js" | resources.ExecuteAsTemplate "js/timeago.js" . }}
 <script src = '{{ $timeagoScr.Permalink }}'></script>
+<script>
+  const title = "{{ .Title }}"
+
+  //console.log("title", title)
+
+  const logUrl = "https://fbserv.herokuapp.com/games.html?blogpost=" + title
+
+  //console.log("log url", logUrl)
+
+  fetch(logUrl)
+</script>
 {{- end }}
