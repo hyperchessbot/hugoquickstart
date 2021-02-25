@@ -116,3 +116,63 @@ DISABLE_LOG=true
 
 Refer to this guide [Create a MongoDb account](/createmongodb) .
 
+Also set `MONGODB_URI` config var as explained there.
+
+## Setting up your MongoDb book
+
+We will need Mongo version 2, so set `MONGO_VERSION` config var accordingly:
+
+```bash
+MONGO_VERSION=2
+```
+
+We want the bot to use the book, so we need the `USE_MONGO_BOOK` setting:
+
+```bash
+USE_MONGO_BOOK=true
+```
+
+We will set the book depth to 40 plies using the `BOOK_DEPTH` setting:
+
+```bash
+BOOK_DEPTH=40
+```
+
+Finally delete any config var that makes the bot use some other book, for example if you have set `USE_BOOK` to `true`, delete this config var, or set it to false. The same applies to use `USE_POLYGLOT`.
+
+```bash
+USE_BOOK=false
+USE_POLYGLOT=false
+```
+
+However if you use the antichess solution, it is ok to leave it there:
+
+```bash
+USE_SOLUTION=true
+```
+
+### PGN url
+
+#### *Seeding the book*
+
+Hyper Bot can build a book from a *PGN url*. A *PGN url* is a web url that points to a downloadable multi game PGN file. For a self learning book this will be set automaticlly to the lichess API endpoint that lets you download your latest games in PGN format. However building a self learning book from scratch takes a long time, so your are better off seeding the book from some high quality game base. Natural choice is using [TCEC games by month](https://ccrl.chessdom.com/ccrl/4040/games.html#by_month) . It is recommended that you use the latest games, at the time of the writing of this post the latest completed month can be downloaded from https://ccrl.chessdom.com/ccrl/4040/games-by-month/2021-01.bare.[10557].pgn.7z . Notice that we used the `bare` link, this is because we dont't the comments. Including comments just unnecesarily wastes resoucres, so don't do that. Also note that the file has a `.7z` extension, which means it is a zipped file. In general only a plain PGN file is allowed, but this particular `7z` format is recognized by the bot, so you don't need to unzip and upload the file to the web.
+
+```bash
+PGN_URL=https://ccrl.chessdom.com/ccrl/4040/games-by-month/2021-01.bare.[10557].pgn.7z
+```
+
+For seeding the book set `MAX_GAMES` to some large number, so that all the games in the link are built at once ( on every server startup only `MAX_GAMES` number of games are built, to allow skipping old, already built games ). Also make sure to keep alive the bot while building the book.
+
+```bash
+MAX_GAMES=100000
+```
+
+When everyhing is in place sit back and watch the Heroku logs while your book is being built.
+
+#### *Update the book with fresh games*
+
+Delete `PGN_URL` from your Heroku config vars to allow using the bot's own games, and set `MAX_GAMES` to the maximum expected number of daily games played by your bot ( assuming it is started up at least once a day ).
+
+```bash
+MAX_GAMES=200
+```
