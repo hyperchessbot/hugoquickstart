@@ -179,7 +179,7 @@ MAX_GAMES=200
 
 # The hard part 2 - Using *syzygy tablebases*
 
-By default your bot is built the convential way on Heroku, using the `heroku` stack and the `Node.js` build pack. However this method is limited in the size of files that can be uploaded. To accomodate *syzygy tablebases* you need `container` stack and a pre built image that contains the tablebases. At the time of writing the post it does not seem possible to set the stack using the Heroku UI. So you need `Heroku CLI` for this.
+By default your bot is built the convential way on Heroku, using the `heroku` stack and the `Node.js` build pack. However this method is limited in the size of files that can be uploaded. To accomodate *syzygy tablebases* you need the `container` stack and a pre built image that contains the tablebases. At the time of writing the post it does not seem possible to set the stack using the Heroku UI. So you need `Heroku CLI` for this.
 
 ## Installing Heroku CLI
 
