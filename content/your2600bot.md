@@ -207,3 +207,11 @@ heroku stack:set container --app yourappname
 ```
 
 ![](https://i.imgur.com/vWROnFj.png)
+
+### Disabling *syzygy tablebases* when using the `container` stack
+
+By default using a `container` stack involves using the tablebases. If you don't like this, use the `DISABLE_SYZYGY` setting:
+
+```bash
+DISABLE_SYZYGY=true
+```
