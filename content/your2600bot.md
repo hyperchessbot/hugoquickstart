@@ -46,6 +46,14 @@ By default you will get a bot that plays strong chess, however to compete with t
 
 To make Hyper Bot really strong, you have to sign up to additional services. You need Heroku CLI and a MongoDb account. If you feel this is a hassle and want a strong bot quickly, Hyper Bot offers you some simple settings that will make your bot play strong.
 
+### Using *Stockfish 13*
+
+By default Hyper Bot uses *Stockfish 12*. This is for backward compatibility. To change this you need the `USE_STOCKFISH_13` setting.
+
+```bash
+USE_STOCKFISH_13=true
+```
+
 ### Threads
 
 Running on a single thread the engine cannot make use of multiple CPUs. To allow harnessing all the computing power of your system, you need to set uci option `Threads` to something more than the default `1`. Natural setting for this variable is the number of physical CPUs of your computer. However on Heroku this works a litle bit different, for a free account the value `4` has proved to be optimal.
@@ -101,3 +109,10 @@ Hyper Bot can show its currently played live game and the evaluation in its home
 ```bash
 DISABLE_LOG=true
 ```
+
+# The hard part - Setting up and using a *MongoDb book*
+
+## Creating a MongoDb account
+
+Refer to this guide [Create a MongoDb account](/createmongodb) .
+
