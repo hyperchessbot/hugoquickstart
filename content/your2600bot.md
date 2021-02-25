@@ -110,7 +110,7 @@ Hyper Bot can show its currently played live game and the evaluation in its home
 DISABLE_LOG=true
 ```
 
-# The hard part - Setting up and using a *MongoDb book*
+# The hard part 1 - Setting up and using a *MongoDb book*
 
 ## Creating a MongoDb account
 
@@ -176,3 +176,34 @@ Delete `PGN_URL` from your Heroku config vars to allow using the bot's own games
 ```bash
 MAX_GAMES=200
 ```
+
+# The hard part 2 - Using *syzygy tablebases*
+
+By default your bot is built the convential way on Heroku, using the `heroku` stack and the `Node.js` build pack. However this method is limited in the size of files that can be uploaded. To accomodate *syzygy tablebases* you need `container` stack and a pre built image that contains the tablebases. At the time of writing the post it does not seem possible to set the stack using the Heroku UI. So you need `Heroku CLI` for this.
+
+## Installing Heroku CLI
+
+https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+
+
+## Setting stack to container
+
+Open a console ( terminal / command prompt ) window ( if you don't know how to do this on your system, find your way based on a search like this https://www.google.com/search?q=open+terminal+command+prompt+window ).
+
+Open a browser window with your app's Heroku login. This should be the active window when you do the following.
+
+In the console type
+
+```bash
+heroku login
+```
+
+In the browser popup enable login.
+
+When you are logged into Heroku CLI, in the console type ( change *yourappname* to the actual name of your app )
+
+```bash
+heroku stack:set container --app yourappname
+```
+
+![](https://i.imgur.com/vWROnFj.png)
