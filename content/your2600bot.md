@@ -138,6 +138,12 @@ We will set the book depth to 40 plies using the `BOOK_DEPTH` setting:
 BOOK_DEPTH=40
 ```
 
+MongoDb lookup is through internet connection, so trying to look up positions when already fallen out of book wastes valuable thinking time. Determining when the bot has fallen out of book it is not exact science, one failed lookup does not amount to this, a line can return to book later on. You can set after how many failed lookups the bot should be considered fallen out of book, using the `SKIP_AFTER_FAILED` setting. Recommended value is `5` .
+
+```bash
+SKIP_AFTER_FAILED=5
+```
+
 Finally delete any config var that makes the bot use some other book, for example if you have set `USE_BOOK` to `true`, delete this config var, or set it to false. The same applies to use `USE_POLYGLOT`.
 
 ```bash
