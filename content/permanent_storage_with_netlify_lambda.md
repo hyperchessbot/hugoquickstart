@@ -1,5 +1,5 @@
 ---
-title: "Recent posts"
+title: "Permanent storage with Netlify lambda"
 date: "2021-10-15T10:19:58+01:00"
 draft: true
 ---
