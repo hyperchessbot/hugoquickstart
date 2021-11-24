@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "node-fetch": "2.6.5",
+    "parse-git-config": "^3.0.0"
+  }
+}
